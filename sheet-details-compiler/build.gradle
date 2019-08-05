@@ -1,0 +1,44 @@
+apply plugin: 'java-library'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+
+ext {
+    bintrayRepo = 'SheetDetails'
+    bintrayName = 'SheetDetailsCompiler'
+
+    publishedGroupId = 'come.eladfinish'
+    libraryName = 'sheet2json'
+    artifact = 'sheet-details-compiler'
+
+    libraryDescription = 'Annotation processor will generate code for parsing json of a google sheet.'
+
+    siteUrl = 'https://github.com/elfifo4'
+    gitUrl = 'https://github.com/elfifo4/sheet2json.git'
+
+    libraryVersion = '1.0'
+
+    developerId = 'elfifo4'
+    developerName = 'Elad Finish'
+    developerEmail = 'elfifo4@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.squareup:javapoet:1.11.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
+    implementation 'org.jetbrains:annotations:16.0.1'
+    //implementation 'org.jetbrains:annotations-java5:17.0.0'
+
+//    implementation 'com.android.support:support-annotations:28.0.0'
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
