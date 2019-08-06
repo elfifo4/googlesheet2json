@@ -1,30 +1,31 @@
 apply plugin: 'java-library'
-apply plugin: 'com.jfrog.bintray'
-apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'maven'
+//apply plugin: 'com.jfrog.bintray'
+//apply plugin: 'com.github.dcendents.android-maven'
 
-ext {
-    bintrayRepo = 'SheetDetails'
-    bintrayName = 'SheetDetailsCompiler'
-
-    publishedGroupId = 'come.eladfinish'
-    libraryName = 'sheet2json'
-    artifact = 'sheet-details-compiler'
-
-    libraryDescription = 'Annotation processor will generate code for parsing json of a google sheet.'
-
-    siteUrl = 'https://github.com/elfifo4'
-    gitUrl = 'https://github.com/elfifo4/sheet2json.git'
-
-    libraryVersion = '1.0'
-
-    developerId = 'elfifo4'
-    developerName = 'Elad Finish'
-    developerEmail = 'elfifo4@gmail.com'
-
-    licenseName = 'The Apache Software License, Version 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["Apache-2.0"]
-}
+//ext {
+//    bintrayRepo = 'SheetDetails'
+//    bintrayName = 'SheetDetailsCompiler'
+//
+//    publishedGroupId = 'come.eladfinish'
+//    libraryName = 'sheet2json'
+//    artifact = 'sheet-details-compiler'
+//
+//    libraryDescription = 'Annotation processor will generate code for parsing json of a google sheet.'
+//
+//    siteUrl = 'https://github.com/elfifo4'
+//    gitUrl = 'https://github.com/elfifo4/sheet2json.git'
+//
+//    libraryVersion = '1.0'
+//
+//    developerId = 'elfifo4'
+//    developerName = 'Elad Finish'
+//    developerEmail = 'elfifo4@gmail.com'
+//
+//    licenseName = 'The Apache Software License, Version 2.0'
+//    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//    allLicenses = ["Apache-2.0"]
+//}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -40,5 +41,18 @@ dependencies {
 sourceCompatibility = "1.8"
 targetCompatibility = "1.8"
 
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+
+task wrapper(type: Wrapper) { gradleVersion = '1.12' }
+task createPom {
+    pom {
+        project {
+            groupId 'com.eladfinish'
+            artifactId 'sheet2json'
+            version '1.0.0'
+
+        }
+    }.writeTo("pom.xml")
+}
+
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

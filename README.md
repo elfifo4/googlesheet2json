@@ -26,7 +26,8 @@ dependencies {
     
     //... other dependencies here
     
-    implementation 'com.github.elfifo4:sheet2json:1.6.0'
+    implementation 'com.github.elfifo4:googlesheet2json:1.0.0'
+    //implementation 'com.github.elfifo4:sheet2json:1.6.0'
 }
 ```
 
