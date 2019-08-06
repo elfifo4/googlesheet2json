@@ -1,9 +1,13 @@
+//apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'java-library'
-apply plugin: 'maven'
+group='com.github.elfifo4'
+
+//apply plugin: 'java-library'
+//apply plugin: 'maven'
 //apply plugin: 'com.jfrog.bintray'
 //apply plugin: 'com.github.dcendents.android-maven'
 
-group='com.github.elfifo4'
 
 //ext {
 //    bintrayRepo = 'SheetDetails'
