@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.eladfinish</groupId>
-  <artifactId>sheet2json</artifactId>
+  <artifactId>googlesheet2json</artifactId>
   <version>1.0.0</version>
   <dependencies>
     <dependency>

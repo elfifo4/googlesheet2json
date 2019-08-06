@@ -47,7 +47,7 @@ task createPom {
     pom {
         project {
             groupId 'com.eladfinish'
-            artifactId 'sheet2json'
+            artifactId 'googlesheet2json'
             version '1.0.0'
 
         }
