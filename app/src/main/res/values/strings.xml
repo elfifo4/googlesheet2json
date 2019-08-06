@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">sheet2json</string>
+    <string name="app_name">googlesheet2json</string>
+    <string name="app_name2">sheet2json</string>
 </resources>

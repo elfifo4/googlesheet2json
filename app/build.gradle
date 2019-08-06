@@ -1,9 +1,13 @@
 apply plugin: 'com.android.application'
 
+repositories {
+    maven { url "https://jitpack.io" }
+}
+
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.eladfinish.sheet2json.sample"
+        applicationId "com.eladfinish.googlesheet2json.sample"
         minSdkVersion 14
         targetSdkVersion 28
         versionCode 1
