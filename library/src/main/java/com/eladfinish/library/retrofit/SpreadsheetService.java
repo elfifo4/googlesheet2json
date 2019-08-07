@@ -1,7 +1,7 @@
 package com.eladfinish.library.retrofit;
 
-import com.eladfinish.sheet2json.model.BaseSheetEntry;
-import com.eladfinish.sheet2json.model.Sheet;
+import com.eladfinish.library.model.BaseSheetEntry;
+import com.eladfinish.library.model.Sheet;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
