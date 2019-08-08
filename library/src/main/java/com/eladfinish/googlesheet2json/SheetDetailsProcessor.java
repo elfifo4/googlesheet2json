@@ -1,12 +1,12 @@
-package com.eladfinish.library;
+package com.eladfinish.googlesheet2json;
 
 
-import com.eladfinish.library.annotations.SheetDetails;
-import com.eladfinish.library.misc.JavaKeywords;
-import com.eladfinish.library.misc.TextUtils;
-import com.eladfinish.library.model.BaseSheetEntry;
-import com.eladfinish.library.model.Sheet;
-import com.eladfinish.library.model.SheetEntryInterface;
+import com.eladfinish.googlesheet2json.annotations.SheetDetails;
+import com.eladfinish.googlesheet2json.misc.JavaKeywords;
+import com.eladfinish.googlesheet2json.misc.TextUtils;
+import com.eladfinish.googlesheet2json.model.BaseSheetEntry;
+import com.eladfinish.googlesheet2json.model.Sheet;
+import com.eladfinish.googlesheet2json.model.SheetEntryInterface;
 import com.google.gson.annotations.SerializedName;
 import com.squareup.javapoet.AnnotationSpec;
 import com.squareup.javapoet.FieldSpec;
@@ -265,7 +265,7 @@ public class SheetDetailsProcessor extends AbstractProcessor {
 
         TypeSpec sheetEntryClass = sheetEntryBuilder.build();
 
-        //"com.eladfinish.sheet2json"
+        //"com.eladfinish.googlesheet2json"
         String packageName = elementUtils.getPackageOf(classElement).toString();
         JavaFile javaFile = JavaFile.builder(packageName, sheetEntryClass).build();
         try {

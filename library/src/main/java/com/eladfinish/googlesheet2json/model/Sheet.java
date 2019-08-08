@@ -1,4 +1,4 @@
-package com.eladfinish.library.model;
+package com.eladfinish.googlesheet2json.model;
 
 import com.google.gson.JsonElement;
 import com.google.gson.annotations.SerializedName;
@@ -23,7 +23,7 @@ public class Sheet {
 
     @Override
     public String toString() {
-        return "com.eladfinish.sheet2json.model.Sheet{" +
+        return "Sheet{" +
                 "version='" + version + '\'' +
                 ", feed=" + feed +
                 '}';

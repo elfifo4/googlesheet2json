@@ -1,4 +1,4 @@
-package com.eladfinish.library.retrofit;
+package com.eladfinish.googlesheet2json.retrofit;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

@@ -1,4 +1,4 @@
-package com.eladfinish.library.misc;
+package com.eladfinish.googlesheet2json.misc;
 
 public class JavaKeywords {
 

@@ -1,4 +1,4 @@
-package com.eladfinish.library.model;
+package com.eladfinish.googlesheet2json.model;
 
 public interface SheetEntryInterface {
 
