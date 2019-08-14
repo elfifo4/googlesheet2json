@@ -5,9 +5,6 @@ import com.eladfinish.googlesheet2json.model.Sheet;
 import com.eladfinish.googlesheet2json.model.SheetData;
 import com.eladfinish.googlesheet2json.model.SheetEntryInterface;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
 
 import org.jetbrains.annotations.NotNull;
@@ -50,11 +47,12 @@ public class RetrofitHelper<T extends BaseSheetEntry> {
                     ArrayList<BaseSheetEntry> items;
 
                     try {
-                        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-                        JsonParser jsonParser = new JsonParser();
-                        JsonElement jsonElement = jsonParser.parse(rows);
-                        String prettyJsonString = gson.toJson(jsonElement);
-                        System.out.println("prettyJsonString:\n" + prettyJsonString);
+
+//                        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+//                        JsonParser jsonParser = new JsonParser();
+//                        JsonElement jsonElement = jsonParser.parse(rows);
+//                        String prettyJsonString = gson.toJson(jsonElement);
+//                        System.out.println("prettyJsonString:\n" + prettyJsonString);
 
 //                        TypeToken<ArrayList<T>> typeToken = new TypeToken<ArrayList<T>>() {};
                         items = new Gson().fromJson(rows, typeToken.getType());
