@@ -44,6 +44,6 @@ dependencies {
     debugAnnotationProcessor project(':library')
 
     //in prod
-    releaseImplementation 'com.github.elfifo4:googlesheet2json:1.3.0'
-    releaseAnnotationProcessor 'com.github.elfifo4:googlesheet2json:1.3.0'
+    releaseImplementation 'com.github.elfifo4:googlesheet2json:1.3.1'
+    releaseAnnotationProcessor 'com.github.elfifo4:googlesheet2json:1.3.1'
 }
