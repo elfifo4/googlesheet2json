@@ -21,6 +21,10 @@ public class Sheet {
         return feed;
     }
 
+    public String getVersion() {
+        return version;
+    }
+
     @Override
     public String toString() {
         return "Sheet{" +
@@ -35,14 +39,14 @@ public class Sheet {
         private Text title;
 
         @SerializedName("author")
-        private ArrayList<Author> author;
+        private ArrayList<Author> authors;
 
         @SerializedName("entry")
         private ArrayList<JsonElement> rows;
 
         public Feed(Text title, ArrayList<Author> author, ArrayList<JsonElement> rows) {
             this.title = title;
-            this.author = author;
+            this.authors = author;
             this.rows = rows;
         }
 
@@ -50,8 +54,8 @@ public class Sheet {
             return rows;
         }
 
-        public ArrayList<Author> getAuthor() {
-            return author;
+        public ArrayList<Author> getAuthors() {
+            return authors;
         }
 
         public Text getTitle() {
@@ -62,7 +66,7 @@ public class Sheet {
         public String toString() {
             return "Feed{" +
                     "title=" + title +
-                    ", author=" + author +
+                    ", authors=" + authors +
                     ", rows=" + rows +
                     '}';
         }
@@ -101,6 +105,14 @@ public class Sheet {
         public Author(Text name, Text email) {
             this.name = name;
             this.email = email;
+        }
+
+        public String getName() {
+            return name.getText();
+        }
+
+        public String getEmail() {
+            return email.getText();
         }
 
         @Override

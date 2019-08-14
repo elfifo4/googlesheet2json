@@ -1,6 +1,5 @@
 package com.eladfinish.googlesheet2json.retrofit;
 
-import com.eladfinish.googlesheet2json.model.BaseSheetEntry;
 import com.eladfinish.googlesheet2json.model.Sheet;
 
 import retrofit2.Call;
@@ -9,14 +8,12 @@ import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface SpreadsheetService {
-//    String PREFIX = "gsx$";
 
     @GET("/feeds/list/{id}/{num}/public/full")
     Call<Sheet> getDataFromSpreadsheet(
             @Path("id") String sheetId,
             @Path("num") int sheetNumber,
             @Query("alt") String format);
-
 
     //getSpreadsheetId
     static String getId(String url) {
@@ -40,12 +37,12 @@ public interface SpreadsheetService {
 //    }
 
 
-    static void setSheetEntry(BaseSheetEntry sheetEntry) {
-//        System.out.println("sheetEntryInterface: " + sheetEntryInterface);
-//        System.out.println("sheetEntryInterface is null: " + sheetEntryInterface == null);
-        System.out.println("sheetEntry");
-        System.out.println(sheetEntry);
-    }
+//    static void setSheetEntry(BaseSheetEntry sheetEntry) {
+////        System.out.println("sheetEntryInterface: " + sheetEntryInterface);
+////        System.out.println("sheetEntryInterface is null: " + sheetEntryInterface == null);
+//        System.out.println("sheetEntry");
+//        System.out.println(sheetEntry);
+//    }
 
 
 //    @SheetDetails

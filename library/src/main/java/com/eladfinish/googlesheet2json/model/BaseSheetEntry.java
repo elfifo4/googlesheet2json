@@ -1,6 +1,6 @@
 package com.eladfinish.googlesheet2json.model;
 
-public class BaseSheetEntry {
+public abstract class BaseSheetEntry {
 
     protected static final String p = "gsx$";
 

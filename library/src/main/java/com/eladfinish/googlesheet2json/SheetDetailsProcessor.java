@@ -14,8 +14,6 @@ import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.TypeSpec;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.io.IOException;
 import java.lang.annotation.Annotation;
 import java.util.Arrays;
@@ -232,7 +230,7 @@ public class SheetDetailsProcessor extends AbstractProcessor {
         MethodSpec toString = MethodSpec.methodBuilder("toString")
                 .addModifiers(Modifier.PUBLIC)
                 .returns(String.class)
-                .addAnnotation(NotNull.class)
+//                .addAnnotation(NotNull.class)
                 .addAnnotation(Override.class)
                 .addStatement(format, className) //"SheetEntry: " + className
                 .build();
@@ -255,7 +253,7 @@ public class SheetDetailsProcessor extends AbstractProcessor {
         MethodSpec getSheetEntryDetails = MethodSpec.methodBuilder("getSheetEntryDetails")
                 .addModifiers(Modifier.PUBLIC)
                 .returns(String.class)
-                .addAnnotation(NotNull.class)
+//                .addAnnotation(NotNull.class)
                 .addAnnotation(Override.class)
                 .addStatement(details.toString())
                 .build();
