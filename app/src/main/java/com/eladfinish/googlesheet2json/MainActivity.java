@@ -49,9 +49,10 @@ public class MainActivity extends AppCompatActivity {
                         .create(SpreadsheetService.class);
 
         Call<Sheet> call = service.getDataFromSpreadsheet(
-                SpreadsheetService.getId(spreadsheetUrl),
-                1, "json");
+                SpreadsheetService.getId(spreadsheetUrl), 1, "json");
 
+        String url = call.request().url().toString();
+        Log.d(MY_TAG, "url of json format: " + url);
 
         RetrofitHelper<Flag_SheetEntry> helper = new RetrofitHelper<>(
                 new TypeToken<ArrayList<Flag_SheetEntry>>() {
@@ -90,9 +91,6 @@ public class MainActivity extends AppCompatActivity {
                 Log.e(MY_TAG, "onFail: " + message);
             }
         });
-
-        String url = call.request().url().toString();
-        Log.d(MY_TAG, "url of json format: " + url);
 
     }
 }

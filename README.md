@@ -63,8 +63,6 @@ dependencies {
 The use of the library is very simple. 
 ```java
 
-//new in version 1.3.0
-
 public class MainActivity extends AppCompatActivity {
     private static final String MY_TAG = MainActivity.class.getSimpleName();
 
@@ -94,8 +92,7 @@ public class MainActivity extends AppCompatActivity {
                         .create(SpreadsheetService.class);
 
         Call<Sheet> call = service.getDataFromSpreadsheet(
-                SpreadsheetService.getId(spreadsheetUrl),
-                1, "json");
+                SpreadsheetService.getId(spreadsheetUrl), 1, "json");
 
 
         RetrofitHelper<Flag_SheetEntry> helper = new RetrofitHelper<>(
