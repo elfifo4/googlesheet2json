@@ -42,7 +42,7 @@ dependencies {
     annotationProcessor 'com.github.elfifo4:googlesheet2json:1.3.1'
     
 /*
-    Last line is required because of this:
+    The last line is required because of this:
     Annotation processors must be explicitly declared now. The following dependencies on the compile classpath are found to contain annotation processor.  Please add them to the annotationProcessor configuration.
     - googlesheet2json-1.3.1.jar (com.github.elfifo4:googlesheet2json:1.3.1)
     Alternatively, set android.defaultConfig.javaCompileOptions.annotationProcessorOptions.includeCompileClasspath = true to continue with previous behavior.  Note that this option is deprecated and will be removed in the future.
@@ -55,20 +55,19 @@ dependencies {
 ## Usage
 
 ```xml
-
 <!-- don't forget to add this permission in AndroidManifest.xml -->
     <uses-permission android:name="android.permission.INTERNET" />
 ```
 
-The use of the library is very simple. 
+The usage of the library is very simple. 
 ```java
-
 public class MainActivity extends AppCompatActivity {
     private static final String MY_TAG = MainActivity.class.getSimpleName();
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
 
+    // this annotation makes the magic:
     @SheetDetails(entryName = "flag",
             fields = {"code", "country", "svg", "png"})
     Flag_SheetEntry flagSheetEntry;
@@ -94,7 +93,9 @@ public class MainActivity extends AppCompatActivity {
         Call<Sheet> call = service.getDataFromSpreadsheet(
                 SpreadsheetService.getId(spreadsheetUrl), 1, "json");
 
-
+        //String url = call.request().url().toString();
+        //Log.d(MY_TAG, "url of json format: " + url);
+        
         RetrofitHelper<Flag_SheetEntry> helper = new RetrofitHelper<>(
                 new TypeToken<ArrayList<Flag_SheetEntry>>() {
                 },
@@ -132,19 +133,14 @@ public class MainActivity extends AppCompatActivity {
                 Log.e(MY_TAG, "onFail: " + message);
             }
         });
-
-        //String url = call.request().url().toString();
-        //Log.d(MY_TAG, "url of json format: " + url);
-
     }
 }
-
-
 ```
+
+## Screenshots
 
 
 ## License
-
 ```
 Copyright 2019 Elad Finish
 
