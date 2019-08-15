@@ -84,6 +84,10 @@ public class MainActivity extends AppCompatActivity {
 
                 mAdapter = new MyAdapter(MainActivity.this, myData, imageUrl);
                 recyclerView.setAdapter(mAdapter);
+
+                System.out.println("sheetData.getRowsAsPrettyJson()");
+                System.out.println(sheetData.getRowsAsPrettyJson());
+
             }
 
             @Override
