@@ -138,6 +138,12 @@ public class MainActivity extends AppCompatActivity {
 ```
 
 ## Screenshots
+Example
+
+https://docs.google.com/spreadsheets/d/e/2PACX-1vSRgrclz00_Pbc7MTJ3n6vcHr6c9uJVpfWueWJccV7gzR-H3MiYcUc5xs-RdVI6paDo1YCs289NQQio/pubhtml
+
+Original Table:
+![google sheet table](https://raw.githubusercontent.com/elfifo4/googlesheet2json/master/screenshots/google_sheet_table.png)
 
 
 ## License
