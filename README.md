@@ -138,13 +138,189 @@ public class MainActivity extends AppCompatActivity {
 ```
 
 ## Screenshots
-Example
+*Example*
 
 https://docs.google.com/spreadsheets/d/e/2PACX-1vSRgrclz00_Pbc7MTJ3n6vcHr6c9uJVpfWueWJccV7gzR-H3MiYcUc5xs-RdVI6paDo1YCs289NQQio/pubhtml
 
 Original Table:
 ![google sheet table](https://raw.githubusercontent.com/elfifo4/googlesheet2json/master/screenshots/google_sheet_table.png)
 
+Library **googlesheet2json** turns this table to pretty json format:
+```json
+[
+  {
+    "code": "",
+    "country": "",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/"
+  },
+  {
+    "code": "AD",
+    "country": "Andorra",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/ad.png",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/ad.svg"
+  },
+  {
+    "code": "AE",
+    "country": "United Arab Emirates",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/ae.png",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/ae.svg"
+  },
+  {
+    "code": "AF",
+    "country": "Afghanistan",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/af.png",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/af.svg"
+  },
+  {
+    "code": "AG",
+    "country": "Antigua and Barbuda",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/ag.png",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/ag.svg"
+  },
+  {
+    "code": "AI",
+    "country": "Anguilla",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/ai.png",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/ai.svg"
+  },
+  {
+    "code": "AL",
+    "country": "Albania",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/al.png",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/al.svg"
+  },
+  {
+    "code": "AM",
+    "country": "Armenia",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/am.png",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/am.svg"
+  },
+  {
+    "code": "AN",
+    "country": "Netherlands Antilles",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/an.png",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/an.svg"
+  },
+  {
+    "code": "AO",
+    "country": "Angola",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/ao.png",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/ao.svg"
+  },
+  {
+    "code": "AQ",
+    "country": "Antarctica",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/aq.png",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/aq.svg"
+  },
+  {
+    "code": "AR",
+    "country": "Argentina",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/ar.png",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/ar.svg"
+  },
+  {
+    "code": "AS",
+    "country": "American Samoa",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/as.png",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/as.svg"
+  },
+  {
+    "code": "AT",
+    "country": "Austria",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/at.png",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/at.svg"
+  },
+  {
+    "code": "AU",
+    "country": "Australia",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/au.png",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/au.svg"
+  },
+  {
+    "code": "AW",
+    "country": "Aruba",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/aw.png",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/aw.svg"
+  },
+  {
+    "code": "AX",
+    "country": "Åland Islands",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/ax.png",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/ax.svg"
+  },
+  {
+    "code": "AZ",
+    "country": "Azerbaijan",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/az.png",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/az.svg"
+  },
+  {
+    "code": "BA",
+    "country": "Bosnia and Herzegovina",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/ba.png",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/ba.svg"
+  },
+  {
+    "code": "BB",
+    "country": "Barbados",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/bb.png",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/bb.svg"
+  },
+  {
+    "code": "BD",
+    "country": "Bangladesh",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/bd.png",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/bd.svg"
+  },
+  {
+    "code": "BE",
+    "country": "Belgium",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/be.png",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/be.svg"
+  },
+  {
+    "code": "BF",
+    "country": "Burkina Faso",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/bf.png",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/bf.svg"
+  },
+  {
+    "code": "BG",
+    "country": "Bulgaria",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/bg.png",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/bg.svg"
+  },
+  {
+    "code": "BH",
+    "country": "Bahrain",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/bh.png",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/bh.svg"
+  },
+  {
+    "code": "BI",
+    "country": "Burundi",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/bi.png",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/bi.svg"
+  },
+  
+  
+  {
+    "...": "..."
+  },
+  
+  
+  {
+    "code": "ZW",
+    "country": "Zimbabwe",
+    "png": "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png1000px/zw.png",
+    "svg": "https://github.com/hjnilsson/country-flags/blob/master/svg/zw.svg"
+  }
+]
+
+```
+ 
 
 ## License
 ```
