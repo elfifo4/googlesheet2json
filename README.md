@@ -165,21 +165,21 @@ public class MainActivity extends AppCompatActivity {
 
 ### Example
 
-* public HTML format:
+* public HTML format:  
 https://docs.google.com/spreadsheets/d/e/2PACX-1vSRgrclz00_Pbc7MTJ3n6vcHr6c9uJVpfWueWJccV7gzR-H3MiYcUc5xs-RdVI6paDo1YCs289NQQio/pubhtml
 
-* original link (available to sheet authors):
+* original link (available to sheet authors):  
 https://docs.google.com/spreadsheets/d/1RaXAwjx4Q8OzXVt3nXfuf1ZppBV_lFWXfKGG2TTzglU
 
-* public JSON format:
+* public JSON format:  
 https://spreadsheets.google.com/feeds/list/1RaXAwjx4Q8OzXVt3nXfuf1ZppBV_lFWXfKGG2TTzglU/1/public/full?alt=json
 
 
-* export to JSON by this url:
+* export to JSON by this url:  
 https://spreadsheets.google.com/feeds/list/{spreadsheetID}/{worksheetNumber}/public/full?alt=json  
 (replace {spreadsheetID} and {worksheetNumber} with your own)
 
-* for more information look at:
+* for more information look at:  
 https://medium.com/@scottcents/how-to-convert-google-sheets-to-json-in-just-3-steps-228fe2c24e6
 
 
