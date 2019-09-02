@@ -1,8 +1,8 @@
 # googlesheet2json
 
-Download data from Google spreadsheet and parse it as json (using Retrofit2)
-
 ## Background
+
+Download data from Google spreadsheet and parse it as json (using Retrofit2)
 
 ## Installation
 [![](https://jitpack.io/v/aitorvs/auto-parcel.svg)](https://jitpack.io/#aitorvs/auto-parcel)
@@ -49,8 +49,25 @@ dependencies {
     See https://developer.android.com/r/tools/annotation-processor-error-message.html for more details.
 */
 
+
+/*
+    If you encounter the following error after build:
+    Error:
+      java.lang.RuntimeException: Duplicate class org.jetbrains.annotations.NotNull found in 
+      modules annotations-16.0.1.jar (org.jetbrains:annotations:16.0.1) 
+      and kotlin-runtime-0.11.91.1.jar (org.jetbrains.kotlin:kotlin-runtime:0.11.91.1)
+
+    You have to append this exclude statement after the dependency:
+    
+    implementation ("com.github.elfifo4:googlesheet2json:1.3.2") {
+        exclude group: 'org.jetbrains'
+    }
+*/
+
 }
 ```
+
+---
 
 ## Usage
 
@@ -68,8 +85,17 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.Adapter mAdapter;
 
     // this annotation makes the magic:
-    @SheetDetails(entryName = "flag",
-            fields = {"code", "country", "svg", "png"})
+    @SheetDetails(
+            //entryName will be prefixed to the name of the generated class (<entryName>_SheetEntry)
+            entryName = "flag",
+
+            //fields are the names of member variables in Flag_SheetEntry
+            fields = {"code", "country", "svg", "png"},
+
+            //labels are the names of columns in Google Sheet
+            //(optional, necessary in case the column names are different from the field names)
+            labels = {"code", "country", "svg", "png"}
+            )
     Flag_SheetEntry flagSheetEntry;
     String spreadsheetUrl = "https://docs.google.com/spreadsheets/d/1RaXAwjx4Q8OzXVt3nXfuf1ZppBV_lFWXfKGG2TTzglU";
 
@@ -116,11 +142,11 @@ public class MainActivity extends AppCompatActivity {
                 ArrayList<String> myData = new ArrayList<>();
                 ArrayList<String> imageUrl = new ArrayList<>();
                 for (BaseSheetEntry row : rows) {
-                    Flag_SheetEntry flagItem = (Flag_SheetEntry) row;
-                    String country = flagItem.getCountry();
+                    Flag_SheetEntry item = (Flag_SheetEntry) row;
+                    String country = item.getCountry();
                     if (!country.isEmpty()) {
                         myData.add(country);
-                        imageUrl.add(flagItem.getPng());
+                        imageUrl.add(item.getPng());
                     }
                 }
 
@@ -137,10 +163,24 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-## Screenshots
-*Example*
+### Example
 
+* public HTML format:
 https://docs.google.com/spreadsheets/d/e/2PACX-1vSRgrclz00_Pbc7MTJ3n6vcHr6c9uJVpfWueWJccV7gzR-H3MiYcUc5xs-RdVI6paDo1YCs289NQQio/pubhtml
+
+* original link (available to sheet authors):
+https://docs.google.com/spreadsheets/d/1RaXAwjx4Q8OzXVt3nXfuf1ZppBV_lFWXfKGG2TTzglU
+
+* public JSON format:
+https://spreadsheets.google.com/feeds/list/1RaXAwjx4Q8OzXVt3nXfuf1ZppBV_lFWXfKGG2TTzglU/1/public/full?alt=json
+
+
+* export to JSON by this url: (replace <spreadsheetID> and <worksheetNumber>)
+https://spreadsheets.google.com/feeds/list/<spreadsheetID>/<worksheetNumber>/public/full?alt=json
+
+* for more information look at:
+https://medium.com/@scottcents/how-to-convert-google-sheets-to-json-in-just-3-steps-228fe2c24e6
+
 
 Original Table:
 ![google sheet table](https://raw.githubusercontent.com/elfifo4/googlesheet2json/master/screenshots/google_sheet_table.png)
