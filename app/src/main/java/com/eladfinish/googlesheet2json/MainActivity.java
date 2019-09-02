@@ -26,8 +26,17 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
 
-    @SheetDetails(entryName = "flag",
-            fields = {"code", "country", "svg", "png"})
+    @SheetDetails(
+            //entryName will be prefixed to the name of the generated class (<entryName>_SheetEntry)
+            entryName = "flag",
+
+            //fields are the names of member variables in Flag_SheetEntry
+            fields = {"code", "country", "svg", "png"},
+
+            //labels are the names of columns in Google Sheet
+            //(optional, necessary in case the column names are different from the field names)
+            labels = {"code", "country", "svg", "png"}
+            )
     Flag_SheetEntry flagSheetEntry;
     String spreadsheetUrl = "https://docs.google.com/spreadsheets/d/1RaXAwjx4Q8OzXVt3nXfuf1ZppBV_lFWXfKGG2TTzglU";
 
@@ -74,11 +83,11 @@ public class MainActivity extends AppCompatActivity {
                 ArrayList<String> myData = new ArrayList<>();
                 ArrayList<String> imageUrl = new ArrayList<>();
                 for (BaseSheetEntry row : rows) {
-                    Flag_SheetEntry flagItem = (Flag_SheetEntry) row;
-                    String country = flagItem.getCountry();
+                    Flag_SheetEntry item = (Flag_SheetEntry) row;
+                    String country = item.getCountry();
                     if (!country.isEmpty()) {
                         myData.add(country);
-                        imageUrl.add(flagItem.getPng());
+                        imageUrl.add(item.getPng());
                     }
                 }
 
