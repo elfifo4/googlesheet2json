@@ -175,8 +175,9 @@ https://docs.google.com/spreadsheets/d/1RaXAwjx4Q8OzXVt3nXfuf1ZppBV_lFWXfKGG2TTz
 https://spreadsheets.google.com/feeds/list/1RaXAwjx4Q8OzXVt3nXfuf1ZppBV_lFWXfKGG2TTzglU/1/public/full?alt=json
 
 
-* export to JSON by this url: (replace <spreadsheetID> and <worksheetNumber>)
-https://spreadsheets.google.com/feeds/list/<spreadsheetID>/<worksheetNumber>/public/full?alt=json
+* export to JSON by this url:
+https://spreadsheets.google.com/feeds/list/{spreadsheetID}/{worksheetNumber}/public/full?alt=json
+(replace {spreadsheetID} and {worksheetNumber} with your own)
 
 * for more information look at:
 https://medium.com/@scottcents/how-to-convert-google-sheets-to-json-in-just-3-steps-228fe2c24e6
