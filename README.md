@@ -176,8 +176,7 @@ https://spreadsheets.google.com/feeds/list/1RaXAwjx4Q8OzXVt3nXfuf1ZppBV_lFWXfKGG
 
 
 * export to JSON by this url:
-https://spreadsheets.google.com/feeds/list/{spreadsheetID}/{worksheetNumber}/public/full?alt=json
-
+https://spreadsheets.google.com/feeds/list/{spreadsheetID}/{worksheetNumber}/public/full?alt=json  
 (replace {spreadsheetID} and {worksheetNumber} with your own)
 
 * for more information look at:
