@@ -79,7 +79,7 @@ dependencies {
 The usage of the library is very simple. 
 ```java
 
-// Important note: The enclosing class of @SheetDetails annotation must reside in some package.
+// IMPORTANT: Enclosing class of @SheetDetails annotation must reside in some package.
 // Otherwise compilation process will end up with a "unnamed package" which causes error in class generating.
 
 package com.eladfinish.googlesheet2json;
