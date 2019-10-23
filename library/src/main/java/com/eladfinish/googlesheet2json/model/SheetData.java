@@ -9,12 +9,14 @@ public class SheetData {
 
     private String version;
     private String title;
+    private String updated;
     private ArrayList<Sheet.Author> authors;
     private ArrayList<BaseSheetEntry> rows;
 
     private SheetData(Builder builder) {
         this.version = builder.version;
         this.title = builder.title;
+        this.updated = builder.updated;
         this.authors = builder.authors;
         this.rows = builder.rows;
     }
@@ -22,6 +24,7 @@ public class SheetData {
     public static class Builder {
         private String version;
         private String title;
+        private String updated;
         private ArrayList<Sheet.Author> authors;
         private final ArrayList<BaseSheetEntry> rows;
 
@@ -36,6 +39,10 @@ public class SheetData {
 
         public Builder setTitle(String title) {
             this.title = title;
+            return this;
+        }
+        public Builder setUpdated(String updated) {
+            this.updated = updated;
             return this;
         }
 
@@ -56,6 +63,15 @@ public class SheetData {
 
     public String getTitle() {
         return title;
+    }
+
+    public String getUpdated() {
+        return updated;
+    }
+
+    public String getUpdatedFormatted() {
+        // convert datetime format. e.g. 2017-11-26 to 26.11.2017
+        return updated.replaceAll("(\\d+)-(\\d+)-(\\d+)T(.*)\\..*", "$3.$2.$1 $4");
     }
 
     public ArrayList<Sheet.Author> getAuthors() {

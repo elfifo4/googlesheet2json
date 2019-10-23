@@ -59,6 +59,7 @@ public class RetrofitHelper<T extends BaseSheetEntry> {
 
                         SheetData sheetData = new SheetData.Builder(items)
                                 .setTitle(feed.getTitle().getText())
+                                .setUpdated(feed.getUpdated().getText())
                                 .setAuthors(feed.getAuthors())
                                 .setVersion(body.getVersion())
                                 .build();

@@ -38,8 +38,8 @@ dependencies {
     
     //... other dependencies here
     
-    implementation 'com.github.elfifo4:googlesheet2json:1.3.3'
-    annotationProcessor 'com.github.elfifo4:googlesheet2json:1.3.3'
+    implementation 'com.github.elfifo4:googlesheet2json:1.3.4'
+    annotationProcessor 'com.github.elfifo4:googlesheet2json:1.3.4'
     
 /*
     The last line is required because of this:

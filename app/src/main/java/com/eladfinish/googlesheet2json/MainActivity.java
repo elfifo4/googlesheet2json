@@ -75,6 +75,8 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(MY_TAG, "onSuccess sheetData: ");
 
                 Log.d(MY_TAG, "Title: " + sheetData.getTitle());
+                Log.d(MY_TAG, "Updated: " + sheetData.getUpdated());
+                Log.d(MY_TAG, "Updated (Formatted): " + sheetData.getUpdatedFormatted());
                 Log.d(MY_TAG, "Version: " + sheetData.getVersion());
                 Log.d(MY_TAG, "Authors: " + sheetData.getAuthors().toString());
 

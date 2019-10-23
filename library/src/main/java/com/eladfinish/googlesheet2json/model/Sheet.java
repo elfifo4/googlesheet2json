@@ -38,15 +38,19 @@ public class Sheet {
         @SerializedName("title")
         private Text title;
 
+        @SerializedName("updated")
+        private Text updated;
+
         @SerializedName("author")
         private ArrayList<Author> authors;
 
         @SerializedName("entry")
         private ArrayList<JsonElement> rows;
 
-        public Feed(Text title, ArrayList<Author> author, ArrayList<JsonElement> rows) {
+        public Feed(Text title, Text updated, ArrayList<Author> authors, ArrayList<JsonElement> rows) {
             this.title = title;
-            this.authors = author;
+            this.updated = updated;
+            this.authors = authors;
             this.rows = rows;
         }
 
@@ -62,10 +66,15 @@ public class Sheet {
             return title;
         }
 
+        public Text getUpdated() {
+            return updated;
+        }
+
         @Override
         public String toString() {
             return "Feed{" +
                     "title=" + title +
+                    ", updated=" + updated +
                     ", authors=" + authors +
                     ", rows=" + rows +
                     '}';
