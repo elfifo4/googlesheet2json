@@ -70,7 +70,14 @@ dependencies {
 ---
 
 ## Usage
+**important line (when app is on release buildType)**
 
+proguard-rules.pro:
+```pro
+-keep class com.eladfinish.googlesheet2json.model.*$* { *; }
+```
+
+AndroidManifest.xml:
 ```xml
 <!-- don't forget to add this permission in AndroidManifest.xml -->
     <uses-permission android:name="android.permission.INTERNET" />
