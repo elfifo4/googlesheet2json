@@ -203,13 +203,15 @@ public class SheetDetailsProcessor extends AbstractProcessor {
 
             //  expected output:
             //  public String get<Field>() {
-            //        return <field>;
+            ////        return <field>.toString();
+            //        return <field> == null ? null : <field>.toString();
             //  }
             String methodName = "get" + TextUtils.capitalize(field);
             MethodSpec getter = MethodSpec.methodBuilder(methodName)
                     .addModifiers(Modifier.PUBLIC)
                     .returns(String.class)
-                    .addStatement("return " + field + ".toString()")
+//                    .addStatement("return " + field + ".toString()")
+                    .addStatement("return " + field + " == null ? null : " + field + ".toString()")
                     .build();
 
             sheetEntryBuilder.addMethod(getter);
