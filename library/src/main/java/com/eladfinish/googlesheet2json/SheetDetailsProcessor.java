@@ -211,7 +211,7 @@ public class SheetDetailsProcessor extends AbstractProcessor {
                     .addModifiers(Modifier.PUBLIC)
                     .returns(String.class)
 //                    .addStatement("return " + field + ".toString()")
-                    .addStatement("return " + field + " == null ? null : " + field + ".toString()")
+                    .addStatement("return " + field + " == null ? \"\" : " + field + ".toString()")
                     .build();
 
             sheetEntryBuilder.addMethod(getter);
