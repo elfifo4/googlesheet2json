@@ -99,6 +99,10 @@ public class MainActivity extends AppCompatActivity {
 
                 System.out.println("sheetData.getRowsAsPrettyJson()");
                 System.out.println(sheetData.getRowsAsPrettyJson());
+                System.out.println("sheetData.getRowsAsRawJson()");
+                System.out.println(sheetData.getRowsAsRawJson());
+                System.out.println("sheetData.getSheetDataAsRawJson()");
+                System.out.println(sheetData.getSheetDataAsRawJson());
 
             }
 

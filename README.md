@@ -38,13 +38,13 @@ dependencies {
     
     //... other dependencies here
     
-    implementation 'com.github.elfifo4:googlesheet2json:1.4.0'
-    annotationProcessor 'com.github.elfifo4:googlesheet2json:1.4.0'
+    implementation 'com.github.elfifo4:googlesheet2json:1.4.1'
+    annotationProcessor 'com.github.elfifo4:googlesheet2json:1.4.1'
     
 /*
     The last line is required because of this:
     Annotation processors must be explicitly declared now. The following dependencies on the compile classpath are found to contain annotation processor.  Please add them to the annotationProcessor configuration.
-    - googlesheet2json-1.4.0.jar (com.github.elfifo4:googlesheet2json:1.4.0)
+    - googlesheet2json-1.4.1.jar (com.github.elfifo4:googlesheet2json:1.4.1)
     Alternatively, set android.defaultConfig.javaCompileOptions.annotationProcessorOptions.includeCompileClasspath = true to continue with previous behavior.  Note that this option is deprecated and will be removed in the future.
     See https://developer.android.com/r/tools/annotation-processor-error-message.html for more details.
 */
@@ -59,7 +59,7 @@ dependencies {
 
     You should append this exclude statement after the dependency:
     
-    implementation ("com.github.elfifo4:googlesheet2json:1.4.0") {
+    implementation ("com.github.elfifo4:googlesheet2json:1.4.1") {
         exclude group: 'org.jetbrains'
     }
 */

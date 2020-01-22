@@ -41,6 +41,7 @@ public class SheetData {
             this.title = title;
             return this;
         }
+
         public Builder setUpdated(String updated) {
             this.updated = updated;
             return this;
@@ -84,17 +85,36 @@ public class SheetData {
 
 
     public String getRowsAsOriginalFormPrettyJson() {
-      return JsonUtils.getPrettyJsonString(rows);
+        return JsonUtils.getPrettyJsonString(rows);
     }
 
     public String getRowsAsPrettyJson() {
+        return JsonUtils.toPrettyFormat(getRowsAsRawJson());
+    }
+
+    public String getRowsAsRawJson() {
         //regex to match string of the form: "gsx$firstname":{"$t":"Elad"}
         //and transform it to: "firstname": "Elad"
         //noinspection RegExpRedundantEscape
         String regex = "\"gsx\\$(.*?)\":\\{\"\\$t\":\"(.*?)\"\\}";
 
-        String simpleJson = new Gson().toJson(rows).replaceAll(regex, "\"$1\":\"$2\"");
-        return JsonUtils.toPrettyFormat(simpleJson);
+        return new Gson().toJson(rows).replaceAll(regex, "\"$1\":\"$2\"");
+    }
+
+    public String getSheetDataAsRawJson() {
+        //regex to match string of the form: "gsx$firstname":{"$t":"Elad"}
+        //and transform it to: "firstname": "Elad"
+        //noinspection RegExpRedundantEscape
+        String regex = "\"gsx\\$(.*?)\":\\{\"\\$t\":\"(.*?)\"\\}";
+
+        String json = new Gson().toJson(SheetData.this);
+        json = json.replaceAll(regex, "\"$1\":\"$2\"");
+
+        //{"$t":"elfifo4"} -> "elfifo4"
+        //noinspection RegExpRedundantEscape
+        json = json.replaceAll("\\{\"\\$t\":\"(.*?)\"\\}", "\"$1\"");
+
+        return json;
     }
 
 
@@ -103,9 +123,9 @@ public class SheetData {
         return "SheetData{" +
                 "version='" + version + '\'' +
                 ", title='" + title + '\'' +
+                ", updated='" + updated + '\'' +
                 ", authors=" + authors +
                 ", rows=" + rows +
                 '}';
     }
-
 }
