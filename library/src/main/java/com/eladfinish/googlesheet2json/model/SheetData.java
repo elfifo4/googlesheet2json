@@ -88,6 +88,14 @@ public class SheetData {
         return JsonUtils.getPrettyJsonString(rows);
     }
 
+    public String getRowsAsOriginalFormRawJson() {
+        return new Gson().toJson(rows);
+    }
+
+    public String getSheetDataAsOriginalFormRawJson() {
+        return new Gson().toJson(SheetData.this);
+    }
+
     public String getRowsAsPrettyJson() {
         return JsonUtils.toPrettyFormat(getRowsAsRawJson());
     }
