@@ -5,7 +5,7 @@
 Download data from Google spreadsheet and parse it as json (using Retrofit2)
 
 ## Installation
-[![](https://jitpack.io/v/aitorvs/auto-parcel.svg)](https://jitpack.io/#aitorvs/auto-parcel)
+[![](https://jitpack.io/v/elfifo4/googlesheet2json.svg)](https://jitpack.io/#elfifo4/googlesheet2json)
 
 ### Repository
 
