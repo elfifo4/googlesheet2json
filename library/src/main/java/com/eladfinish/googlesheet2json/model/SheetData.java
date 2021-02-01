@@ -3,15 +3,17 @@ package com.eladfinish.googlesheet2json.model;
 import com.eladfinish.googlesheet2json.utils.JsonUtils;
 import com.google.gson.Gson;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class SheetData {
 
-    private String version;
-    private String title;
-    private String updated;
-    private ArrayList<Sheet.Author> authors;
-    private ArrayList<BaseSheetEntry> rows;
+    private final String version;
+    private final String title;
+    private final String updated;
+    private final ArrayList<Sheet.Author> authors;
+    private final ArrayList<BaseSheetEntry> rows;
 
     private SheetData(Builder builder) {
         this.version = builder.version;
@@ -127,7 +129,7 @@ public class SheetData {
 
 
     @Override
-    public String toString() {
+    public @NotNull String toString() {
         return "SheetData{" +
                 "version='" + version + '\'' +
                 ", title='" + title + '\'' +

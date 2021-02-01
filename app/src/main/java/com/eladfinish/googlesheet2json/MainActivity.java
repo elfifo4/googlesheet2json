@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String MY_TAG = MainActivity.class.getSimpleName();
 
     private RecyclerView recyclerView;
-    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.Adapter<?> mAdapter;
 
     @SheetDetails(
             //entryName will be prefixed to the name of the generated class (<entryName>_SheetEntry)
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             //labels are the names of columns in Google Sheet
             //(optional, necessary in case the column names are different from the field names)
             labels = {"code", "country", "svg", "png"}
-            )
+    )
     Flag_SheetEntry flagSheetEntry;
     String spreadsheetUrl = "https://docs.google.com/spreadsheets/d/1RaXAwjx4Q8OzXVt3nXfuf1ZppBV_lFWXfKGG2TTzglU";
 
