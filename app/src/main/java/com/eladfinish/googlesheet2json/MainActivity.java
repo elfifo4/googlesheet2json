@@ -52,6 +52,12 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
+//        getFlags();
+
+        TestKt.testKotlinVersion(this, findViewById(R.id.progress_bar), recyclerView);
+    }
+
+    private void getFlags() {
         flagSheetEntry = new Flag_SheetEntry();
 
         SpreadsheetService service =
@@ -111,6 +117,5 @@ public class MainActivity extends AppCompatActivity {
                 Log.e(MY_TAG, "onFail: " + message);
             }
         });
-
     }
 }
