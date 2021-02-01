@@ -3,6 +3,7 @@
 ## Background
 
 Download data from Google spreadsheet and parse it as json (using Retrofit2)
+https://gist.github.com/elfifo4/2f628f7e39093c6fa0b8c08ba0b8659a
 
 ## Installation
 [![](https://jitpack.io/v/elfifo4/googlesheet2json.svg)](https://jitpack.io/#elfifo4/googlesheet2json)
