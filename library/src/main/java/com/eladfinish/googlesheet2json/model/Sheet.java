@@ -3,14 +3,16 @@ package com.eladfinish.googlesheet2json.model;
 import com.google.gson.JsonElement;
 import com.google.gson.annotations.SerializedName;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class Sheet {
 
     @SerializedName("version")
-    private String version;
+    private final String version;
     @SerializedName("feed")
-    private Feed feed;
+    private final Feed feed;
 
     public Sheet(String version, Feed feed) {
         this.version = version;
@@ -26,26 +28,26 @@ public class Sheet {
     }
 
     @Override
-    public String toString() {
+    public @NotNull String toString() {
         return "Sheet{" +
                 "version='" + version + '\'' +
                 ", feed=" + feed +
                 '}';
     }
 
-    public class Feed {
+    public static class Feed {
 
         @SerializedName("title")
-        private Text title;
+        private final Text title;
 
         @SerializedName("updated")
-        private Text updated;
+        private final Text updated;
 
         @SerializedName("author")
-        private ArrayList<Author> authors;
+        private final ArrayList<Author> authors;
 
         @SerializedName("entry")
-        private ArrayList<JsonElement> rows;
+        private final ArrayList<JsonElement> rows;
 
         public Feed(Text title, Text updated, ArrayList<Author> authors, ArrayList<JsonElement> rows) {
             this.title = title;
@@ -71,7 +73,7 @@ public class Sheet {
         }
 
         @Override
-        public String toString() {
+        public @NotNull String toString() {
             return "Feed{" +
                     "title=" + title +
                     ", updated=" + updated +
@@ -82,10 +84,10 @@ public class Sheet {
     }
 
 
-    public class Text {
+    public static class Text {
 
         @SerializedName("$t")
-        private String text;
+        private final String text;
 
         public Text(String text) {
             this.text = text;
@@ -96,20 +98,20 @@ public class Sheet {
         }
 
         @Override
-        public String toString() {
+        public @NotNull String toString() {
             return text;
         }
 
     }
 
 
-    public class Author {
+    public static class Author {
 
         @SerializedName("name")
-        private Text name;
+        private final Text name;
 
         @SerializedName("email")
-        private Text email;
+        private final Text email;
 
         public Author(Text name, Text email) {
             this.name = name;
@@ -125,7 +127,7 @@ public class Sheet {
         }
 
         @Override
-        public String toString() {
+        public @NotNull String toString() {
             return "Author{" +
                     "name=" + name +
                     ", email=" + email +

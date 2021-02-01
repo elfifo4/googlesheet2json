@@ -13,12 +13,12 @@ import com.bumptech.glide.Glide;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
-    private Context mContext;
-    private ArrayList<String> mData;
-    private ArrayList<String> mUrls;
+    private final Context mContext;
+    private final List<String> mData;
+    private final List<String> mUrls;
 
     static class MyViewHolder extends RecyclerView.ViewHolder {
         TextView textView;
@@ -31,7 +31,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         }
     }
 
-    MyAdapter(Context context, ArrayList<String> data, ArrayList<String> urls) {
+    MyAdapter(Context context, List<String> data, List<String> urls) {
         mContext = context;
         mData = data;
         mUrls = urls;

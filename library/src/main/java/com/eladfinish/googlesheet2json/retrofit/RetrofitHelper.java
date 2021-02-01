@@ -18,7 +18,7 @@ import retrofit2.Response;
 
 public class RetrofitHelper<T extends BaseSheetEntry> {
 
-    private TypeToken<ArrayList<T>> typeToken;
+    private final TypeToken<ArrayList<T>> typeToken;
 
     public interface DoAfterDownloadListener {
         void onSuccess(SheetData sheetData);
